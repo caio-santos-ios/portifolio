@@ -13,7 +13,7 @@ export const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto flex xl:items-center py-8">
                     <Link className='p-4 bg-slate-600 text-slate-300 no-underline rounded-xl w-52 xl:mx-4' target='_blank' href="https://wa.me/73991952027">Falar no whatsApp</Link>
-                    <Nav.Link className='text-2xl font-semibold' href="#">Sobre min</Nav.Link>
+                    <Nav.Link className='text-2xl font-semibold' href="#">Sobre mim</Nav.Link>
                     <Nav.Link className='text-2xl font-semibold' href="#">Habilidades</Nav.Link>
                     <Nav.Link className='text-2xl font-semibold' href="#">Projetos</Nav.Link>
                     <Nav.Link className='text-2xl font-semibold' href="#">Contatos</Nav.Link>

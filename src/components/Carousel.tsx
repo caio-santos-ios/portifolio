@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { apiGitHub } from '@/service/apiGitHub';
+import { GoChevronLeft, GoChevronRight, } from "react-icons/go";
 
 export const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -36,8 +37,8 @@ export const Carousel = () => {
                 </div>
             </div>
             <div className='py-10 w-full flex justify-center gap-8'>
-                <button className="bg-blue-500 text-white p-4" onClick={handlePrev}>Anterior</button>
-                <button className="bg-blue-500 text-white p-4" onClick={handleNext}>Próximo</button>
+                <button className="bg-blue-500 text-white p-4" onClick={handlePrev}><GoChevronLeft size={20}/></button>
+                <button className="bg-blue-500 text-white p-4" onClick={handleNext}><GoChevronRight size={20} /></button>
             </div>  
         </div>
   );
