@@ -12,7 +12,20 @@ const nextConfig = {
             },
         ],
     formats: ["image/webp"],
-    }
+    },
+    async headers() {
+        return [
+          {
+            source: '/api/:path*',
+            headers: [
+              {
+                key: 'Access-Control-Allow-Origin',
+                value: 'http://localhost:3000',
+              },
+            ],
+          },
+        ];
+      },
 }
 
 module.exports = nextConfig

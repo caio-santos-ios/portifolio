@@ -3,12 +3,20 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 
-export default function Home() {
+const listProject = async () => {
+  const res = await fetch('https://back-end-projetos.onrender.com/projetos')
+  const respoonse = res.json() 
+  return respoonse
+}
+
+export default async function Home() {
+  const myList = await listProject()
+
   return (
     <>
       <Header />
       <main className="body bg-[var(--bg-body)] text-[var(--color-body)]">
-        <section className="section pt-40 h-[87vh]">
+        <section className="section lg:h-[80vh]">
           <h1 className="title_section">Sobre mim</h1>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Image className="rounded-full" width={300} height={300} src="https://res.cloudinary.com/dia2yiu6k/image/upload/v1701897993/wxjaenezlngs2qvlxixq.jpg" alt="minha-foto-perfil" />
@@ -18,9 +26,9 @@ export default function Home() {
           </div>
         </section>
         
-        <section className="section h-[87vh] sm:h-[50vh]">
+        <section className="section lg:h-[75vh]">
           <h1 className="title_section">Habilidades</h1>
-          <div className="grid grid-cols-1 gap-2 xl:grid-cols-2 justify-items-center xl:w-[60rem] xl:m-auto">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 justify-items-center xl:w-[60rem] xl:m-auto">
             <div className="p-8 bg-[var(--bg-header)] min-h-[23rem] md:w-[28rem] max-w-md md:max-w-md rounded-md">
               <h4>
                 Front-End
@@ -39,9 +47,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section flex justify-center items-center flex-col h-[87vh]">
+        <section className="section flex justify-center items-center flex-col">
           <h1 className="title_section">Meus projetos</h1>
-          <Carousel />
+          <Carousel projects={myList} />
         </section>
       </main>
       <Footer />

@@ -11,8 +11,8 @@
 }
 
 @layer components {
-    .body { @apply h-full m-auto pt-[13rem] } 
-    .section { @apply w-[90vw] xl:w-[75vw] m-auto sm:py-0}
+    .body { @apply h-full m-auto pt-[13rem] flex flex-col items-center gap-16 } 
+    .section { @apply w-[90vw] xl:w-[75vw] py-8}
     .title_section { @apply py-8 font-light text-3xl text-center }
     .description_section { @apply font-light }
   }
