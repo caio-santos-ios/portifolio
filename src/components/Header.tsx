@@ -10,7 +10,6 @@ export const Header = () => {
     return(
         <header className="bg-[var(--bg-header)] min-h-[12rem] w-full absolute z-10 flex items-center justify-center">
              <Navbar className='w-[70vw] xl:m-auto flex justify-between' style={{height: '100%', padding: '2rem'}} expand="xl">
-                {/*<Image height={200} src={logo} alt='meu-logo' /> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto flex xl:items-center py-8">
