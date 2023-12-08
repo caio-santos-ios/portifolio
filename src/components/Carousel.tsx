@@ -41,8 +41,8 @@ export const Carousel = ({projects}: Iprops) => {
                                     </Link>
                                     <div className='flex gap-1 flex-wrap justify-center'>
                                         {
-                                            project.tecnologies.map((tecnology: Ttecnology) => {
-                                                return <img src={`https://skillicons.dev/icons?i=${tecnology.name}`} />
+                                            project.tecnologies.map((tecnology: Ttecnology, i: number) => {
+                                                return <img key={i} src={`https://skillicons.dev/icons?i=${tecnology.name}`} />
                                             })
                                         }
                                     </div>
