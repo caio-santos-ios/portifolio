@@ -6,10 +6,13 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "res.cloudinary.com"
             },
-
+            {
+                protocol: "https",
+                hostname: "skillicons.dev"
+            },
         ],
     formats: ["image/webp"],
-    },
+    }
 }
 
 module.exports = nextConfig

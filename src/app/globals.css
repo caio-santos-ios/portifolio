@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-header: #013C58;
+  --color-header: #A8E8F9;
+  --bg-body2: #A8E8F9;
+  --bg-body: #00537A;
+  --color-body: #F5A201;
+}
+
 @layer components {
-    .body { @apply w-[95vw] h-[90vh] m-auto pt-[13rem] } 
-    .section { @apply w-full h-full md:w-[70vw] m-auto mb-4 bg-slate-500 }
+    .body { @apply h-full m-auto pt-[13rem] } 
+    .section { @apply w-[90vw] xl:w-[75vw] m-auto}
     .title_section { @apply py-8 font-light text-3xl text-center }
     .description_section { @apply font-light }
   }
+
