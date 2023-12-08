@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section className="section">
+        <section className="section h-[87vh]">
           <h1 className="title_section">Habilidades</h1>
           <div className="grid grid-cols-1 gap-2 xl:grid-cols-2 justify-items-center xl:w-[60rem] xl:m-auto">
             <div className="p-8 bg-[var(--bg-header)] min-h-[23rem] md:w-[28rem] max-w-md md:max-w-md rounded-md">
