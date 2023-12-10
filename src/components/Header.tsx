@@ -12,7 +12,10 @@ export const Header = () => {
 
     return(
         <header className='flex py-4 items-center justify-around bg-[var(--bg-header)] text-[var(--color-header)]'>
-            <h1>Caio</h1>
+            <h1 className='flex items-center gap-1'>
+                Caio
+                <img src="https://skillicons.dev/icons?i=devto" />	
+            </h1>
             <nav>
                 <button onClick={openMenu} className='md:hidden'>
                     <IoMenuSharp size={20} />
