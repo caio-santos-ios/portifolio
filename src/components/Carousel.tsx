@@ -26,7 +26,7 @@ export const Carousel = ({projects}: Iprops) => {
                         {projects.map((project: Tproject) => (
                             <div key={project.id} className="w-full md:h-[40rem] flex-shrink-0 p-4 bg-[var(--bg-header)] rounded-lg">
                                 <div className='flex items-center flex-wrap sm:gap-10 justify-center'>
-                                    <h2 className="text-xl font-bold mb-2 text-center w-52 bg-slate-400">{project.name}</h2> 
+                                    <h2 className="text-xl font-bold mb-2 text-center w-52">{project.name}</h2> 
                                     <Link target='_blank' className='p-2 no-underline text-[var(--color-body)] bg-[var(--bg-body)] flex items-center gap-2 rounded-lg' href={project.repository}>
                                         Repositório
                                         <img src="https://skillicons.dev/icons?i=github" />
