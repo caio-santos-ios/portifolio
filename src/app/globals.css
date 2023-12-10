@@ -17,3 +17,6 @@
     .description_section { @apply font-light }
   }
 
+.show {
+  transform: translateX(0);
+}

@@ -15,8 +15,9 @@ export default async function Home() {
   return (
     <>
       <Header />
+    
       <main className="body bg-[var(--bg-body)] text-[var(--color-body)]">
-        <section className="section lg:h-[80vh]">
+        <section id="about" className="section lg:h-[80vh]">
           <h1 className="title_section">Sobre mim</h1>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Image className="rounded-full" width={300} height={300} src="https://res.cloudinary.com/dia2yiu6k/image/upload/v1701897993/wxjaenezlngs2qvlxixq.jpg" alt="minha-foto-perfil" />
@@ -26,7 +27,7 @@ export default async function Home() {
           </div>
         </section>
         
-        <section className="section lg:h-[75vh]">
+        <section id="ability" className="section lg:h-[75vh]">
           <h1 className="title_section">Habilidades</h1>
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 justify-items-center xl:w-[60rem] xl:m-auto">
             <div className="p-8 bg-[var(--bg-header)] min-h-[23rem] md:w-[28rem] max-w-md md:max-w-md rounded-md">
@@ -47,12 +48,14 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="section flex justify-center items-center flex-col">
+        <section id="projects" className="section flex justify-center items-center flex-col">
           <h1 className="title_section">Meus projetos</h1>
           <Carousel projects={myList} />
         </section>
       </main>
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
     </>
   )
 }

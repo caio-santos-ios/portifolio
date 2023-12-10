@@ -1,26 +1,34 @@
 "use client"
 
 import Link from 'next/link';
-import { Navbar, Nav } from 'react-bootstrap';
-import logo from "@/assets/logo.png"
-import Image from 'next/image';
-
+import { IoMenuSharp } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 export const Header = () => {
+    const openMenu = () => {
+        const menu = document.querySelector('ul')
+        menu?.classList.toggle('show')
+    }
+
     return(
-        <header className="bg-[var(--bg-header)] min-h-[12rem] w-full absolute z-10 flex items-center justify-center">
-             <Navbar className='w-[70vw] xl:m-auto flex justify-between' style={{height: '100%', padding: '2rem'}} expand="xl">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto flex xl:items-center py-8">
-                    <Link className='p-4 bg-slate-600 text-[var(--color-header)] no-underline rounded-xl w-52 xl:mx-4' target='_blank' href="https://wa.me/73991952027">Falar no whatsApp</Link>
-                    <Nav.Link style={{color: 'var(--color-header)'}} href="#">Sobre mim</Nav.Link>
-                    <Nav.Link style={{color: 'var(--color-header)'}} href="#">Habilidades</Nav.Link>
-                    <Nav.Link style={{color: 'var(--color-header)'}} href="#">Projetos</Nav.Link>
-                    <Nav.Link style={{color: 'var(--color-header)'}} href="#">Contatos</Nav.Link>
-                </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+        <header className='flex py-4 items-center justify-around bg-[var(--bg-header)] text-[var(--color-header)]'>
+            <h1>Caio</h1>
+            <nav>
+                <button onClick={openMenu} className='md:hidden'>
+                    <IoMenuSharp size={20} />
+                </button>
+                <ul className="bg-[var(--bg-header)] fixed top-0 right-0 h-full w-full z-10 translate-x-[100%] transition-transform duration-500 ease-in-out md:relative md:translate-x-0">
+                    <div className='flex flex-col gap-1 items-end px-10 py-10 text-[var(--color-header)] md:flex-row md:justify-between md:w-[30rem]'>
+                        <Link className='no-underline text-[var(--color-header)]' onClick={openMenu} href="#about" >Sobre mim</Link>
+                        <Link className='no-underline text-[var(--color-header)]' onClick={openMenu} href="#ability" >Habilidades</Link>
+                        <Link className='no-underline text-[var(--color-header)]' onClick={openMenu} href="#projects" >Projetos</Link>
+                        <Link className='no-underline text-[var(--color-header)]' onClick={openMenu} href="#contact" >Contatos</Link>
+                        <button className='mt-4 md:hidden' onClick={openMenu}>
+                            <IoMdClose size={20} />
+                        </button>
+                    </div>
+                </ul>
+            </nav>
         </header>
     )
 }
