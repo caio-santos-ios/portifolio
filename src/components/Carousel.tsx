@@ -24,7 +24,7 @@ export const Carousel = ({projects}: Iprops) => {
                 <div className="w-screen overflow-hidden mx-auto md:w-[45rem]">
                     <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {projects.map((project: Tproject) => (
-                            <div key={project.id} className="w-full min-h-[44rem] md:h-[40rem] flex-shrink-0 p-4 bg-[var(--bg-header)] rounded-lg">
+                            <div key={project.id} className="w-full md:h-[40rem] flex-shrink-0 p-4 bg-[var(--bg-header)] rounded-lg">
                                 <div className='flex items-center flex-wrap sm:gap-10 justify-center'>
                                     <h2 className="text-xl font-bold mb-2 text-center w-52">{project.name}</h2> 
                                     <Link target='_blank' className='p-2 no-underline text-[var(--color-body)] bg-[var(--bg-body)] flex items-center gap-2 rounded-lg' href={project.repository}>
@@ -33,7 +33,7 @@ export const Carousel = ({projects}: Iprops) => {
                                     </Link>
                                 </div>
                                 <p className='h-[8rem] py-2'>{project.description}</p>
-                                <Image className='w-full rounded-lg h-[16rem] sm:h-3/6 my-4 border border-[var(--color-body)] p-1' alt='foto da tela principal do projeto' src={project.photo} height={0} width={0} />
+                                <Image className='w-full hidden sm:flex rounded-lg h-[16rem] sm:h-3/6 my-4 border border-[var(--color-body)] p-1' alt='foto da tela principal do projeto' src={project.photo} height={0} width={0} />
                                 <div className='p-1 no-underline text-[var(--color-body)] bg-[var(--bg-body)] flex items-center gap-2 rounded-lg flex-wrap flex-col sm:flex-row sm:justify-between'>
                                     <Link target='_blank' className='flex justify-center items-center gap-1 p-2 no-underline text-[var(--color-body)]' href={project.link}>
                                         Site
