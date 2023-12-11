@@ -19,11 +19,13 @@ export const Carousel = ({projects}: Iprops) => {
 
     const handleNext = () => { setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length) }
 
+    const newProjects = projects.sort((a, b) => a.id - b.id)
+
     return (
             <div className="w-full flex items-center justify-center flex-wrap relative">
                 <div className="w-screen overflow-hidden mx-auto md:w-[45rem]">
                     <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                        {projects.map((project: Tproject) => (
+                        {newProjects.map((project: Tproject) => (
                             <div key={project.id} className="w-full md:h-[40rem] flex-shrink-0 p-4 bg-[var(--bg-header)] rounded-lg">
                                 <div className='flex items-center flex-wrap sm:gap-10 justify-center'>
                                     <h2 className="text-xl font-bold mb-2 text-center w-52">{project.name}</h2> 
