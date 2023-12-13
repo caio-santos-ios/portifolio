@@ -3,14 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 
-const listProject = async () => {
-  const res = await fetch('https://back-end-projetos.onrender.com/projetos')
-  const respoonse = res.json() 
-  return respoonse
-}
-
 export default async function Home() {
-  const myList = await listProject()
 
   return (
     <>
@@ -50,7 +43,7 @@ export default async function Home() {
 
         <section id="projects" className="section flex justify-center items-center flex-col">
           <h1 className="title_section">Meus projetos</h1>
-          <Carousel projects={myList} />
+          <Carousel />
         </section>
       </main>
       <section id="contact">

@@ -9,23 +9,35 @@ import Image from 'next/image';
 import { SlGlobe } from "react-icons/sl";
 
 interface Iprops {
-    projects: Tproject[];
+    myProjects: Tproject[];
 }
 
-export const Carousel = ({projects}: Iprops) => {
+export const Carousel = () => {
+    const [myProjects, setMyProjects] = useState([])
+
+    useEffect(() => {
+        const req = async () => {
+            try {
+                const res = await api.get("/projetos")
+                setMyProjects(res.data)
+            } catch (error) {}
+        }
+        req()
+    })
+
     const [currentIndex, setCurrentIndex] = useState(0)
 
-    const handlePrev = () => { setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length) }
+    const handlePrev = () => { setCurrentIndex((prevIndex) => (prevIndex - 1 + myProjects.length) % myProjects.length) }
 
-    const handleNext = () => { setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length) }
+    const handleNext = () => { setCurrentIndex((prevIndex) => (prevIndex + 1) % myProjects.length) }
 
-    const newProjects = projects.sort((a, b) => a.id - b.id)
+    const newProjects = myProjects.length > 0 && myProjects.sort((a, b) => a.id - b.id)
 
     return (
             <div className="w-full flex items-center justify-center flex-wrap relative">
                 <div className="w-screen overflow-hidden mx-auto md:w-[45rem]">
                     <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                        {newProjects.map((project: Tproject) => (
+                        { myProjects.map((project: Tproject) => (
                             <div key={project.id} className="w-full md:h-[40rem] flex-shrink-0 p-4 bg-[var(--bg-header)] rounded-lg">
                                 <div className='flex items-center flex-wrap sm:gap-10 justify-center'>
                                     <h2 className="text-xl font-bold mb-2 text-center w-52">{project.name}</h2> 
