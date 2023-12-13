@@ -31,8 +31,6 @@ export const Carousel = () => {
 
     const handleNext = () => { setCurrentIndex((prevIndex) => (prevIndex + 1) % myProjects.length) }
 
-    const newProjects = myProjects.length > 0 && myProjects.sort((a, b) => a.id - b.id)
-
     return (
             <div className="w-full flex items-center justify-center flex-wrap relative">
                 <div className="w-screen overflow-hidden mx-auto md:w-[45rem]">
