@@ -1,10 +1,18 @@
 import { Carousel } from "@/components/Carousel";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { api } from "@/service/api";
 import Image from "next/image";
 
-export default async function Home() {
+const fetchProjects = async () => {
+  const response = await api.get("/projetos")
+  return response.data
 
+}
+
+export default async function Home() {
+  const projects = await fetchProjects()
+  
   return (
     <>
       <Header />
@@ -43,7 +51,7 @@ export default async function Home() {
 
         <section id="projects" className="section flex justify-center items-center flex-col">
           <h1 className="title_section">Meus projetos</h1>
-          <Carousel />
+          <Carousel projects={projects} />
         </section>
       </main>
       <section id="contact">
