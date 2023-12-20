@@ -7,12 +7,11 @@ import Image from "next/image";
 const fetchProjects = async () => {
   const response = await api.get("/projetos")
   return response.data
-
 }
 
 export default async function Home() {
   const projects = await fetchProjects()
-  
+
   return (
     <>
       <Header />
