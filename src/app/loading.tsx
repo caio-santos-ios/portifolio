@@ -4,6 +4,7 @@ import Image from "next/image";
 import photoLoading from "@/assets/loading.svg"
 
 const loading = () => {
+    
     return(
         <main className="body bg-[var(--bg-body)] text-[var(--color-body)]">
             <section className="section h-[87vh] flex flex-col items-center gap-2">
