@@ -35,7 +35,7 @@ export const Carousel = ({projects}: Iprops) => {
                                         </Link>
                                     </div>
                                     <p className='min-h-[8rem] py-2'>{project.description}</p>
-                                    <Image className='w-full hidden sm:flex rounded-lg h-[16rem] sm:h-3/6 my-4 border border-[var(--color-body)] p-1' alt='foto da tela principal do projeto' src={project.photo} height={300} width={300} />
+                                    <Image className='w-10/12 hidden sm:flex rounded-lg h-[16rem] sm:h-3/6 my-4 border border-[var(--color-body)] p-1 m-auto' alt='foto da tela principal do projeto' src={project.photo} height={300} width={300} />
                                     <div className='p-1 no-underline text-[var(--color-body)] bg-[var(--bg-body)] flex items-center gap-2 rounded-lg flex-wrap flex-col sm:flex-row sm:justify-between'>
                                         <Link target='_blank' className='flex justify-center items-center gap-1 p-2 no-underline text-[var(--color-body)]' href={project.link}>
                                             Site

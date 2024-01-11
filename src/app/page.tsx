@@ -2,6 +2,7 @@ import { Carousel } from "@/components/Carousel";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { api } from "@/service/api";
+import axios from "axios";
 import Image from "next/image";
 
 const fetchProjects = async () => {
