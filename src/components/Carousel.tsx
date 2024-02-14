@@ -54,8 +54,8 @@ export const Carousel = ({projects}: Iprops) => {
                         </div>
                     </div>
                     <div className='py-10 w-full flex justify-center gap-8'>
-                        <button className="text-white p-4 bg-[var(--bg-header)] rounded-full lg:absolute lg:bg-[var(--color-body)] left-[2.5rem] z-10 bottom-80" onClick={handlePrev}><GoChevronLeft size={20}/></button>
-                        <button className="text-white p-4 bg-[var(--bg-header)] rounded-full lg:absolute lg:bg-[var(--color-body)] right-[2.5rem] z-10 bottom-80" onClick={handleNext}><GoChevronRight size={20} /></button>
+                        <button type='button' className="text-white p-4 bg-[var(--bg-header)] rounded-full lg:absolute lg:bg-[var(--color-body)] left-[2.5rem] z-10 bottom-80" onClick={handlePrev}><GoChevronLeft size={20}/></button>
+                        <button type='button' className="text-white p-4 bg-[var(--bg-header)] rounded-full lg:absolute lg:bg-[var(--color-body)] right-[2.5rem] z-10 bottom-80" onClick={handleNext}><GoChevronRight size={20} /></button>
                     </div>  
                 </div>
             }
