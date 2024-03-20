@@ -51,9 +51,7 @@ export default async function Home() {
 
         <section id="projects" className="section flex justify-center items-center flex-col">
           <h1 className="title_section">Meus projetos</h1>
-          {/*
           <Carousel projects={projects} />
-          */}
         </section>
       </main>
       <section id="contact">
