@@ -1,0 +1,9 @@
+.card-project {
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+.img-project {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
