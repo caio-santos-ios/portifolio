@@ -243,13 +243,17 @@ nav.scrolled {
 #projects { border-top: 1px solid var(--border); }
 .projects-grid {
   display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 .project-card {
   background: var(--bg); text-decoration: none; color: inherit;
   display: flex; flex-direction: column; overflow: hidden;
   transition: background 0.3s; position: relative;
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 .project-card:hover { background: var(--subtle); }
 .project-card::after {
