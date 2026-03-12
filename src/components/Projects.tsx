@@ -2,11 +2,48 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const PROJECTS = [
-  { year: "2026", name: "Landing Page - Suco Vitallis",       stack: "Next.js · TypeScript · Tailwind · SEO", img: "/projeto-1.png", href: "https://sucovitallis.com.br/" },
-  { year: "2024", name: "E-commerce Completo",  stack: "Next.js · Stripe · Zustand · Tailwind",                 img: "/projeto-02.png", href: "#" },
-  { year: "2024", name: "Landing Page Animada", stack: "Next.js · Framer Motion · Tailwind",                   img: "/projeto-03.png", href: "#" },
-  { year: "2024", name: "API REST com Auth",    stack: "Node.js · TypeScript · JWT · Prisma",                  img: "/projeto-04.png", href: "#" },
+interface Project {
+  year: string;
+  name: string;
+  stack: string;
+  imgs: string[];
+  href: string;
+  orientation?: "landscape" | "portrait"; // portrait = print de celular
+}
+
+const PROJECTS: Project[] = [
+  {
+    year: "2026",
+    name: "Landing Page - Suco Vitallis",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-1.png"],
+    href: "https://sucovitallis.com.br/",
+  },
+  {
+    year: "2026",
+    name: "App PASBEM",
+    stack: "Next.js · TypeScript · PWA · Tailwind",
+    imgs: [
+      "/projeto-2-1.jpg",
+      "/projeto-2-2.jpg",
+    ],
+    href: "#",
+    orientation: "portrait", 
+  },
+  {
+    year: "2024",
+    name: "Landing Page Animada",
+    stack: "Next.js · Framer Motion · Tailwind",
+    imgs: ["/projeto-03.png"],
+    href: "#",
+  },
+  {
+    year: "2024",
+    name: "API REST com Auth",
+    stack: "Node.js · TypeScript · JWT · Prisma",
+    imgs: ["/projeto-04.png"],
+    href: "#",
+  },
 ];
 
 const Arrow = () => (
@@ -14,17 +51,87 @@ const Arrow = () => (
     <path d="M5 19L19 5M19 5H8M19 5V16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
+const ChevronLeft = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+    <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+const ChevronRight = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+    <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
-function Card({ p }: { p: typeof PROJECTS[0] }) {
-  const [err, setErr] = useState(false);
+function CardImage({ imgs, name, orientation = "landscape" }: {
+  imgs: string[];
+  name: string;
+  orientation?: "landscape" | "portrait";
+}) {
+  const [current, setCurrent] = useState(0);
+  const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({});
+  const multiple = imgs.length > 1;
+
+  const prev = (e: React.MouseEvent) => {
+    e.preventDefault(); e.stopPropagation();
+    setCurrent(i => (i - 1 + imgs.length) % imgs.length);
+  };
+  const next = (e: React.MouseEvent) => {
+    e.preventDefault(); e.stopPropagation();
+    setCurrent(i => (i + 1) % imgs.length);
+  };
+  const goTo = (e: React.MouseEvent, i: number) => {
+    e.preventDefault(); e.stopPropagation();
+    setCurrent(i);
+  };
+
+  const wrapClass = `carousel-wrap${orientation === "portrait" ? " portrait" : ""}`;
+
   return (
-    <a href={p.href} className="project-card reveal mb-4" target="_blank">
-      <div className="project-img-wrap">
-        {!err
-          ? <Image src={p.img} alt={p.name} fill style={{objectFit:"cover"}} onError={() => setErr(true)} />
-          : <div className="project-placeholder">Imagem do Projeto</div>
-        }
-      </div>
+    <div className={wrapClass}>
+      {imgs.map((src, i) => (
+        <div key={i} className={`carousel-slide${i === current ? " active" : ""}`}>
+          {!imgErrors[i] ? (
+            <Image
+              src={src}
+              alt={`${name} — imagem ${i + 1}`}
+              fill
+              style={{ objectFit: "contain" }}
+              onError={() => setImgErrors(prev => ({ ...prev, [i]: true }))}
+            />
+          ) : (
+            <div className="project-placeholder">Imagem do Projeto</div>
+          )}
+        </div>
+      ))}
+
+      {multiple && (
+        <>
+          <button className="carousel-btn prev" onClick={prev} aria-label="Imagem anterior">
+            <ChevronLeft />
+          </button>
+          <button className="carousel-btn next" onClick={next} aria-label="Próxima imagem">
+            <ChevronRight />
+          </button>
+          <div className="carousel-dots">
+            {imgs.map((_, i) => (
+              <button
+                key={i}
+                className={`carousel-dot${i === current ? " active" : ""}`}
+                onClick={e => goTo(e, i)}
+                aria-label={`Ir para imagem ${i + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+function Card({ p }: { p: Project }) {
+  return (
+    <a href={p.href} className="project-card reveal" target="_blank" rel="noopener noreferrer">
+      <CardImage imgs={p.imgs} name={p.name} orientation={p.orientation} />
       <div className="project-body">
         <div className="project-num">{p.year}</div>
         <div className="project-name">{p.name}</div>
