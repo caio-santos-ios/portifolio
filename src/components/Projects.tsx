@@ -14,6 +14,20 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     year: "2026",
+    name: "FinFlow — Plataforma de Gestão Financeira Pessoal",
+    stack: "Next.js · TypeScript · Tailwind · .NET",
+    imgs: [
+      "/projeto-4-1.png",
+      "/projeto-4-2.png",
+      "/projeto-4-3.png",
+      "/projeto-4-4.png",
+      "/projeto-4-5.png",
+      "/projeto-4-6.png",
+    ],
+    href: "#",
+  },
+  {
+    year: "2026",
     name: "SAAS Telemovvi",
     stack: "Next.js · TypeScript · Tailwind · .NET",
     imgs: [
@@ -44,21 +58,7 @@ const PROJECTS: Project[] = [
     ],
     href: "#",
     orientation: "portrait", 
-  },
-  {
-    year: "2024",
-    name: "Landing Page Animada",
-    stack: "Next.js · Framer Motion · Tailwind",
-    imgs: ["/projeto-03.png"],
-    href: "#",
-  },
-  {
-    year: "2024",
-    name: "API REST com Auth",
-    stack: "Node.js · TypeScript · JWT · Prisma",
-    imgs: ["/projeto-04.png"],
-    href: "#",
-  },
+  }
 ];
 
 const Arrow = () => (
