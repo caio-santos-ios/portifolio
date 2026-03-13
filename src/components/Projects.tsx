@@ -31,6 +31,16 @@ const PROJECTS: Project[] = [
     orientation: "portrait", 
   },
   {
+    year: "2026",
+    name: "SAAS Telemovvi",
+    stack: "Next.js · TypeScript · Tailwind · .NET",
+    imgs: [
+      "/projeto-2-1.jpg",
+      "/projeto-2-2.jpg",
+    ],
+    href: "https://erpmais.online/", 
+  },
+  {
     year: "2024",
     name: "Landing Page Animada",
     stack: "Next.js · Framer Motion · Tailwind",
