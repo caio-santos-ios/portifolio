@@ -14,6 +14,16 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     year: "2026",
+    name: "SAAS Telemovvi",
+    stack: "Next.js · TypeScript · Tailwind · .NET",
+    imgs: [
+      "/projeto-2-1.jpg",
+      "/projeto-2-2.jpg",
+    ],
+    href: "https://erpmais.online/", 
+  },
+  {
+    year: "2026",
     name: "Landing Page - Suco Vitallis",
     stack: "Next.js · TypeScript · Tailwind · SEO",
     imgs: ["/projeto-1.png"],
@@ -29,16 +39,6 @@ const PROJECTS: Project[] = [
     ],
     href: "#",
     orientation: "portrait", 
-  },
-  {
-    year: "2026",
-    name: "SAAS Telemovvi",
-    stack: "Next.js · TypeScript · Tailwind · .NET",
-    imgs: [
-      "/projeto-2-1.jpg",
-      "/projeto-2-2.jpg",
-    ],
-    href: "https://erpmais.online/", 
   },
   {
     year: "2024",
