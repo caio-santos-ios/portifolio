@@ -28,6 +28,13 @@ const PROJECTS: Project[] = [
   },
   {
     year: "2026",
+    name: "Landing Page - Advocacia",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-5.png"],
+    href: "https://sucovitallis.com.br/",
+  },
+  {
+    year: "2026",
     name: "SAAS Telemovvi",
     stack: "Next.js · TypeScript · Tailwind · .NET",
     imgs: [
