@@ -21,7 +21,9 @@ const PROJECTS: Project[] = [
       "/projeto-3-2.png",
       "/projeto-3-3.png",
       "/projeto-3-4.png",
-      "/projeto-3-5.png"
+      "/projeto-3-5.png",
+      "/projeto-3-6.png",
+      "/projeto-3-7.png"
     ],
     href: "https://erpmais.online/", 
   },
