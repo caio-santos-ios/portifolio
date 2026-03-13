@@ -17,8 +17,11 @@ const PROJECTS: Project[] = [
     name: "SAAS Telemovvi",
     stack: "Next.js · TypeScript · Tailwind · .NET",
     imgs: [
-      "/projeto-2-1.jpg",
-      "/projeto-2-2.jpg",
+      "/projeto-3-1.png",
+      "/projeto-3-2.png",
+      "/projeto-3-3.png",
+      "/projeto-3-4.png",
+      "/projeto-3-5.png"
     ],
     href: "https://erpmais.online/", 
   },
