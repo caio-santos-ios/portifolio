@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
     name: "Landing Page - Advocacia",
     stack: "Next.js · TypeScript · Tailwind · SEO",
     imgs: ["/projeto-5.png"],
-    href: "https://sucovitallis.com.br/",
+    href: "https://page-advocacia-nu.vercel.app/",
   },
   {
     year: "2026",
@@ -65,7 +65,35 @@ const PROJECTS: Project[] = [
     ],
     href: "#",
     orientation: "portrait", 
-  }
+  },
+  {
+    year: "2026",
+    name: "Landing Page - Escola de Idioma",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-6.png"],
+    href: "https://page-idiomas.vercel.app/",
+  },
+  {
+    year: "2026",
+    name: "Landing Page - Imobiliaria",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-7.png"],
+    href: "https://page-imobiliaria.vercel.app/",
+  },
+  {
+    year: "2026",
+    name: "Landing Page - Agências de marketing",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-8.png"],
+    href: "https://page-marketing-beta.vercel.app/",
+  },
+  {
+    year: "2026",
+    name: "Landing Page - Clínica Odontológica",
+    stack: "Next.js · TypeScript · Tailwind · SEO",
+    imgs: ["/projeto-9.png"],
+    href: "https://page-odonto.vercel.app/",
+  },
 ];
 
 const Arrow = () => (
