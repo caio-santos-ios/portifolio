@@ -1,10 +1,30 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Caio — Desenvolvedor Full Stack",
+  metadataBase: new URL('https://caiodesenvolvedor.com.br'),
+  title: {
+    default: "Caio — Desenvolvedor Full Stack",
+    template: "%s | Caio Desenvolvedor"
+  },
   description:
     "Interfaces rápidas e elegantes com Next.js, TypeScript e Tailwind CSS. Transformo ideias em produtos digitais que funcionam de verdade.",
+  keywords: ["Desenvolvedor Full Stack", "Next.js", "React", "TypeScript", "Caio Desenvolvedor", "Freelancer Tech"],
+  authors: [{ name: "Caio" }],
+  creator: "Caio",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://caiodesenvolvedor.com.br",
+    title: "Caio — Desenvolvedor Full Stack",
+    description: "Interfaces rápidas e elegantes com Next.js e TypeScript.",
+    siteName: "Caio Desenvolvedor",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +34,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
+      {/* Insira seu ID do Google Analytics aqui (G-XXXXXXX) */}
+      <GoogleAnalytics gaId="G-XXXXXXXXXX" />
     </html>
   );
 }
