@@ -21,7 +21,12 @@ const PROJECTS: Project[] = [
       "/projeto-11-2.png",
       "/projeto-11-3.png",
       "/projeto-11-4.png",
-      "/projeto-11-5.png"
+      "/projeto-11-5.png",
+      "/projeto-11-6.png",
+      "/projeto-11-7.png",
+      "/projeto-11-8.png",
+      "/projeto-11-9.png",
+      "/projeto-11-10.png"
     ],
     href: "#",
   },
