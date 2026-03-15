@@ -11,6 +11,7 @@ interface Project {
   orientation?: "landscape" | "portrait"; // portrait = print de celular
 }
 
+
 const PROJECTS: Project[] = [
   {
     year: "2026",
