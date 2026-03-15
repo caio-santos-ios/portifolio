@@ -14,6 +14,19 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     year: "2026",
+    name: "Gestão de Oficina",
+    stack: "Next.js · TypeScript · Tailwind · .NET",
+    imgs: [
+      "/projeto-11-1.png",
+      "/projeto-11-2.png",
+      "/projeto-11-3.png",
+      "/projeto-11-4.png",
+      "/projeto-11-5.png"
+    ],
+    href: "#",
+  },
+  {
+    year: "2026",
     name: "Gestão de Clínicas e consultório/Estúdios de treino personalizado",
     stack: "Next.js · TypeScript · Tailwind · .NET",
     imgs: [
