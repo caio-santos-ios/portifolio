@@ -37,8 +37,7 @@ export default function RootLayout({
       <body>
         {children}
       </body>
-      {/* Insira seu ID do Google Analytics aqui (G-XXXXXXX) */}
-      <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+      <GoogleAnalytics gaId="G-FLEQFHMLGF" />
     </html>
   );
 }
