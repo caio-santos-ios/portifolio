@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import RevealObserver from "../components/RevealObserver";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
 
       <main>
+        <WhatsAppButton phoneNumber="5511965079106"/>
         <Hero />
         <Marquee />
         <Projects />
