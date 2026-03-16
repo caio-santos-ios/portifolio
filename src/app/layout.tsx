@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   keywords: ["Desenvolvedor Full Stack", "Next.js", "React", "TypeScript", "Caio Desenvolvedor", "Freelancer Tech"],
   authors: [{ name: "Caio" }],
   creator: "Caio",
+  verification: {
+    google: "zCYtMqNjgJ2Tyga_rdZ14h876YSth6V-tR6udzRHi_I",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
