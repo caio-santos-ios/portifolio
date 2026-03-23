@@ -15,6 +15,24 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     year: "2026",
+    name: "Simulador de Financiamento",
+    stack: "Next.js · TypeScript · Tailwind · .NET",
+    imgs: [
+      "/projeto-11-1.png",
+      "/projeto-11-2.png",
+      "/projeto-11-3.png",
+      "/projeto-11-4.png",
+      "/projeto-11-5.png",
+      "/projeto-11-6.png",
+      "/projeto-11-7.png",
+      "/projeto-11-8.png",
+      "/projeto-11-9.png",
+      "/projeto-11-10.png"
+    ],
+    href: "#",
+  },
+  {
+    year: "2026",
     name: "Gestão de Oficina",
     stack: "Next.js · TypeScript · Tailwind · .NET",
     imgs: [
