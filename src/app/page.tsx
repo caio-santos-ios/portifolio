@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import RevealObserver from "../components/RevealObserver";
 import WhatsAppButton from "../components/WhatsAppButton";
+import Pricing from "../components/Pricing";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Marquee />
         <Projects />
         <Skills />
+        <Pricing />
         <Contact />
       </main>
 
