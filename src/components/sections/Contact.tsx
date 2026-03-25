@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
-import { Toast, ToastType } from "./Toast";
+import { Toast, ToastType } from "../widgets/Toast";
 
 
 

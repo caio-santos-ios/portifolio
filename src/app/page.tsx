@@ -1,14 +1,14 @@
-import Navbar from "../components/Navbar";
-import CustomCursor from "../components/CustomCursor";
-import Hero from "../components/Hero";
-import Marquee from "../components/Marquee";
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import RevealObserver from "../components/RevealObserver";
-import WhatsAppButton from "../components/WhatsAppButton";
-import Pricing from "../components/Pricing";
+import Navbar from "../components/sections/Navbar";
+import CustomCursor from "../components/sections/CustomCursor";
+import Hero from "../components/sections/Hero";
+import Marquee from "../components/sections/Marquee";
+import Projects from "../components/sections/Projects";
+import Skills from "../components/sections/Skills";
+import Contact from "../components/sections/Contact";
+import Footer from "../components/sections/Footer";
+import RevealObserver from "../components/sections/RevealObserver";
+import WhatsAppButton from "../components/widgets/WhatsAppButton";
+import Pricing from "../components/sections/Pricing";
 
 export default function Home() {
   return (
