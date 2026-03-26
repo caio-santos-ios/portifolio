@@ -20,6 +20,15 @@ const PROJECTS: Project[] = [
     imgs: [
       "/projeto-14-1.jpg",
       "/projeto-14-2.jpg",
+      "/projeto-14-3.png",
+      "/projeto-14-4.png",
+      "/projeto-14-5.png",
+      "/projeto-14-6.png",
+      "/projeto-14-7.png",
+      "/projeto-14-8.png",
+      "/projeto-14-9.png",
+      "/projeto-14-10.png",
+      "/projeto-14-21.png"
     ],
     href: "#",
     orientation: "portrait", 
