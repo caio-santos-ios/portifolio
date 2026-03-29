@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Toast, ToastType } from "../widgets/Toast";
 
@@ -30,7 +30,6 @@ export default function Contact() {
       setStatus('sucesso');
       setForm({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error(error);
       setStatus('erro');
     } finally {
       setLoading(false);
