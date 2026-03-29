@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
       "/projeto-14-9.jpg",
       "/projeto-14-10.jpg",
       "/projeto-14-21.jpg",
-      "projeto-14-22.jpg"
+      "/projeto-14-22.jpg"
     ],
     href: "#",
     orientation: "portrait", 
