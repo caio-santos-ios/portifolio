@@ -13,6 +13,27 @@ interface Project {
 
 
 const PROJECTS: Project[] = [
+    {
+    year: "2026",
+    name: "App Barbearia",
+    stack: "Next.js · TypeScript · PWA · Tailwind",
+    imgs: [
+      "/projeto-14-1.jpg",
+      "/projeto-14-2.jpg",
+      "/projeto-14-3.jpg",
+      "/projeto-14-4.jpg",
+      "/projeto-14-5.jpg",
+      "/projeto-14-6.jpg",
+      "/projeto-14-7.jpg",
+      "/projeto-14-8.jpg",
+      "/projeto-14-9.jpg",
+      "/projeto-14-10.jpg",
+      "/projeto-14-21.jpg",
+      "projeto-14-22.jpg"
+    ],
+    href: "#",
+    orientation: "portrait", 
+  },
   {
     year: "2026",
     name: "Simulador de Financiamento",
