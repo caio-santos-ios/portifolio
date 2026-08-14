@@ -12,28 +12,25 @@ interface Project {
 }
 
 
-const PROJECTS: Project[] = [
-    {
+const SAAS_PROJECT: Project = {
     year: "2026",
-    name: "App Barbearia",
-    stack: "Next.js · TypeScript · PWA · Tailwind",
+    name: "SaaS de Barbearia",
+    stack: "Next.js · Angular · C# (.NET) · MongoDB",
     imgs: [
-      "/projeto-14-1.jpg",
-      "/projeto-14-2.jpg",
-      "/projeto-14-3.jpg",
-      "/projeto-14-4.jpg",
-      "/projeto-14-5.jpg",
-      "/projeto-14-6.jpg",
-      "/projeto-14-7.jpg",
-      "/projeto-14-8.jpg",
-      "/projeto-14-9.jpg",
-      "/projeto-14-10.jpg",
-      "/projeto-14-21.jpg",
-      "/projeto-14-22.jpg"
+      "/Captura de tela 2026-08-14 154136.png",
+      "/Captura de tela 2026-08-14 154145.png",
+      "/Captura de tela 2026-08-14 154155.png",
+      "/Captura de tela 2026-08-14 154202.png",
+      "/Captura de tela 2026-08-14 154211.png",
+      "/Captura de tela 2026-08-14 154220.png",
+      "/Captura de tela 2026-08-14 154229.png",
+      "/Captura de tela 2026-08-14 154254.png"
     ],
-    href: "#",
-    orientation: "portrait", 
-  },
+    href: "http://localhost:3000",
+    orientation: "landscape", 
+};
+
+const PROJECTS: Project[] = [
   {
     year: "2026",
     name: "Simulador de Financiamento",
@@ -259,7 +256,14 @@ function Card({ p }: { p: Project }) {
 export default function Projects() {
   return (
     <section id="projects" className="section">
-      <p className="section-label reveal">Projetos</p>
+      <p className="section-label reveal">Projeto em Destaque</p>
+      <h2 className="section-title reveal" style={{ marginBottom: "2rem" }}>SaaS Completo.</h2>
+      
+      <div className="projects-grid reveal" style={{ marginBottom: '6rem' }}>
+         <Card p={SAAS_PROJECT} />
+      </div>
+
+      <p className="section-label reveal">Outros Projetos</p>
       <h2 className="section-title reveal">Cases que<br/>falam por mim.</h2>
       <div className="projects-grid">
         {PROJECTS.map((p, i) => <Card key={i} p={p} />)}
