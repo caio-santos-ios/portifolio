@@ -26,7 +26,7 @@ const SAAS_PROJECT: Project = {
       "/Captura de tela 2026-08-14 154229.png",
       "/Captura de tela 2026-08-14 154254.png"
     ],
-    href: "http://localhost:3000",
+    href: "https://saas-barber-xi.vercel.app/",
     orientation: "landscape", 
 };
 
